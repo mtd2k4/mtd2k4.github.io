@@ -1,144 +1,150 @@
-
-
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trang cá nhân • Liên hệ</title>
+  <title>MaiTienDung • Portfolio</title>
   <meta name="description" content="Trang giới thiệu cá nhân và thông tin liên hệ." />
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-  --bg: #0b0c10;
-  --bg-alt: #111218;
-  --text: #e6e6e6;
-  --muted: #b9bcc6;
-  --accent: #5dd39e;
-  --btn-bg: #ffffff;
-  --btn-text: #0b0c10;
-  --border: #2a2e37;
-  --max-w: 920px;
-}
+      --bg: #0b0c10;
+      --bg-alt: #111218;
+      --text: #f0f0f0;
+      --muted: #9ca3af;
+      --accent: #5dd39e;
+      --btn-bg: #5dd39e;
+      --btn-text: #0b0c10;
+      --border: #2a2e37;
+      --max-w: 920px;
+    }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-.container{
-  width: min(100% - 2rem, var(--max-w));
-  margin-inline: auto;
-}
+    .container{
+      width: min(100% - 2rem, var(--max-w));
+      margin-inline: auto;
+    }
 
-.accent{ color: var(--accent); }
+    a{color:inherit;text-decoration:none}
 
-/* Hero */
-.hero{
-  padding: 6rem 0 3rem;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(93,211,158,0.08), rgba(0,0,0,0));
-}
-.hero__title{
-  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
-  margin: 0 0 .5rem;
-}
-.hero__subtitle{
-  margin: 0 auto 1rem;
-  color: var(--muted);
-  max-width: 48ch;
-}
+    .accent{ color: var(--accent); }
 
-/* Skills line */
-.skills{
-  list-style: none;
-  display: flex;
-  gap: .75rem;
-  justify-content: center;
-  padding: 0;
-  margin: 1rem 0 2rem;
-  flex-wrap: wrap;
-}
-.skills li{
-  border: 1px solid var(--border);
-  padding: .4rem .7rem;
-  border-radius: 999px;
-  font-size: .95rem;
-  color: var(--text);
-  background: rgba(255,255,255,.02);
-}
+    /* Hero */
+    .hero{
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(93,211,158,0.12), rgba(0,0,0,0));
+    }
+    .hero__title{
+      font-size: clamp(2rem, 4vw + 1rem, 3.2rem);
+      margin-bottom:.6rem;
+      font-weight:700;
+    }
+    .hero__subtitle{
+      margin: 0 auto 1.5rem;
+      color: var(--muted);
+      max-width: 52ch;
+      font-size:1.05rem;
+    }
 
-/* Buttons */
-.btn{
-  display: inline-block;
-  text-decoration: none;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  padding: .7rem 1rem;
-  border-radius: .6rem;
-  border: 1px solid transparent;
-  font-weight: 600;
-}
-.btn:hover,
-.btn:focus{ transform: translateY(-1px); }
-.btn:focus{ outline: 2px solid var(--accent); outline-offset: 2px; }
+    /* Skills */
+    .skills{
+      list-style:none;
+      display:flex;
+      gap:.6rem;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin:1.2rem 0 2.5rem;
+      padding:0;
+    }
+    .skills li{
+      padding:.45rem .9rem;
+      border-radius:999px;
+      font-size:.9rem;
+      font-weight:500;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      transition:.3s;
+    }
+    .skills li:hover{ background: rgba(93,211,158,0.15); border-color:var(--accent); }
 
-.btn--outline{
-  background: transparent;
-  color: var(--text);
-  border-color: var(--border);
-  margin-left: .5rem;
-}
+    /* Buttons */
+    .btn{
+      display:inline-block;
+      padding:.75rem 1.3rem;
+      border-radius:.7rem;
+      font-weight:600;
+      transition:.25s;
+    }
+    .btn-primary{
+      background:var(--btn-bg);
+      color:var(--btn-text);
+    }
+    .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 4px 12px rgba(93,211,158,.3); }
+    .btn-outline{
+      border:1px solid var(--border);
+      margin-left:.6rem;
+    }
+    .btn-outline:hover{ border-color:var(--accent); color:var(--accent); }
 
-/* Sections */
-.section{ padding: 3rem 0; }
-.section--alt{ background: var(--bg-alt); }
-.section h2{
-  margin: 0 0 .75rem;
-  font-size: 1.6rem;
-}
+    /* Section */
+    .section{ padding:4rem 1rem; }
+    .section--alt{ background:var(--bg-alt); }
+    .section h2{
+      font-size:1.7rem;
+      margin-bottom:1rem;
+      font-weight:700;
+    }
+    .section p{ color:var(--muted); }
 
-/* Contact list */
-.contact{
-  list-style: none;
-  padding: 0;
-  margin: .5rem 0 0;
-}
-.contact li{
-  padding: .4rem 0;
-  border-top: 1px solid var(--border);
-}
-.contact li:first-child{ border-top: none; }
-.contact a{
-  color: var(--accent);
-  text-decoration: none;
-}
-.contact a:hover{ text-decoration: underline; }
+    /* Contact */
+    .contact{
+      list-style:none;
+      margin-top:1rem;
+      padding:0;
+    }
+    .contact li{
+      padding:.5rem 0;
+      border-top:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+    }
+    .contact li:first-child{border-top:none}
+    .contact a{color:var(--accent)}
+    .contact a:hover{text-decoration:underline}
 
-/* Footer */
-.footer{
-  border-top: 1px solid var(--border);
-  background: #0a0b0f;
-  padding: 1.2rem 0;
-  text-align: center;
-  color: var(--muted);
-}
+    /* Icons */
+    .icon{width:18px;height:18px;fill:var(--accent)}
 
-/* Small screens */
-@media (max-width: 480px){
-  .btn--outline{ display:inline-block; margin-top:.6rem; margin-left:0; }
-}
+    /* Footer */
+    .footer{
+      border-top:1px solid var(--border);
+      background:#0a0b0f;
+      padding:1.5rem 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:.9rem;
+    }
 
+    @media(max-width:480px){
+      .btn-outline{display:block;margin:.8rem 0 0}
+    }
   </style>
+</head>
 <body>
   <header class="hero" id="home">
     <div class="container">
       <h1 class="hero__title">Xin chào, tôi là <span class="accent">MaiTienDung</span></h1>
-      <p class="hero__subtitle">Sinh viên / Lập trình viên yêu thích công nghệ & phát triển web</p>
+      <p class="hero__subtitle">Sinh viên / Lập trình viên đam mê công nghệ & phát triển web</p>
 
       <ul class="skills">
         <li>HTML</li>
@@ -148,9 +154,9 @@ body{
         <li>C#</li>
       </ul>
 
-      <nav class="cta">
-        <a class="btn" href="#about" aria-label="Tìm hiểu thêm">Tìm hiểu thêm</a>
-        <a class="btn btn--outline" href="#contact" aria-label="Liên hệ">Liên hệ</a>
+      <nav>
+        <a class="btn btn-primary" href="#about">Tìm hiểu thêm</a>
+        <a class="btn btn-outline" href="#contact">Liên hệ</a>
       </nav>
     </div>
   </header>
@@ -161,7 +167,8 @@ body{
         <h2>Về tôi</h2>
         <p>
           Mình đam mê lập trình web và thường xuyên xây dựng các dự án nhỏ để trau dồi kỹ năng.
-          Mục tiêu là học hỏi liên tục và phát triển trong lĩnh vực phần mềm.
+          Mục tiêu là học hỏi liên tục và phát triển sự nghiệp trong lĩnh vực phần mềm, đặc biệt là
+          <span class="accent">Front-end Development</span> và <span class="accent">UI/UX</span>.
         </p>
       </div>
     </section>
@@ -171,9 +178,25 @@ body{
         <h2>Liên hệ</h2>
         <p>Kết nối với tôi qua:</p>
         <ul class="contact">
-          <!-- Thay thế các giá trị bên dưới bằng thông tin của bạn -->
-          <li><strong>Email:</strong> <a href="mailto:">none</a></li>
-          <li><strong>Facebook:</strong> <a href="https://facebook.com/" target="_blank" rel="noopener">facebook.com/your.profile</a></li>
+          <li>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 
+            2v12c0 1.1.9 2 2 2h16c1.1 
+            0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+            4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <strong>Email:</strong> <a href="mailto:yourmail@example.com">yourmail@example.com</a>
+          </li>
+          <li>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 
+            6.48 2 12c0 4.84 3.44 8.87 
+            8 9.8v-6.9h-2.4V12H10V9.8c0-2.4 
+            1.43-3.7 3.62-3.7 1.05 
+            0 2.15.18 2.15.18v2.37h-1.21c-1.2 
+            0-1.57.75-1.57 
+            1.52V12h2.67l-.43 
+            2.9H13v6.9c4.56-.93 8-4.96 
+            8-9.8z"/></svg>
+            <strong>Facebook:</strong> <a href="https://facebook.com/your.profile" target="_blank">facebook.com/your.profile</a>
+          </li>
         </ul>
       </div>
     </section>
@@ -181,7 +204,7 @@ body{
 
   <footer class="footer">
     <div class="container">
-      <small>© 2025 MaiTienDung All rights reserved.</small>
+      <small>© 2025 MaiTienDung — All rights reserved.</small>
     </div>
   </footer>
 </body>
