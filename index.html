@@ -1,15 +1,188 @@
-# 🚀 My Project
 
-Welcome to **My Project**!  
-This repository contains source code, documentation, and examples for my personal learning and experiments.
 
-## 📂 Structure
-- `src/` : Main source code  
-- `docs/` : Documentation  
-- `tests/` : Unit tests  
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang cá nhân • Liên hệ</title>
+  <meta name="description" content="Trang giới thiệu cá nhân và thông tin liên hệ." />
+</head>
+  <style>
+    :root{
+  --bg: #0b0c10;
+  --bg-alt: #111218;
+  --text: #e6e6e6;
+  --muted: #b9bcc6;
+  --accent: #5dd39e;
+  --btn-bg: #ffffff;
+  --btn-text: #0b0c10;
+  --border: #2a2e37;
+  --max-w: 920px;
+}
 
-## ⚙️ Installation
-```bash
-git clone https://github.com/username/repo-name.git
-cd repo-name
-npm install
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container{
+  width: min(100% - 2rem, var(--max-w));
+  margin-inline: auto;
+}
+
+.accent{ color: var(--accent); }
+
+/* Hero */
+.hero{
+  padding: 6rem 0 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(93,211,158,0.08), rgba(0,0,0,0));
+}
+.hero__title{
+  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+  margin: 0 0 .5rem;
+}
+.hero__subtitle{
+  margin: 0 auto 1rem;
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+/* Skills line */
+.skills{
+  list-style: none;
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  flex-wrap: wrap;
+}
+.skills li{
+  border: 1px solid var(--border);
+  padding: .4rem .7rem;
+  border-radius: 999px;
+  font-size: .95rem;
+  color: var(--text);
+  background: rgba(255,255,255,.02);
+}
+
+/* Buttons */
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: .7rem 1rem;
+  border-radius: .6rem;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+.btn:hover,
+.btn:focus{ transform: translateY(-1px); }
+.btn:focus{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.btn--outline{
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+  margin-left: .5rem;
+}
+
+/* Sections */
+.section{ padding: 3rem 0; }
+.section--alt{ background: var(--bg-alt); }
+.section h2{
+  margin: 0 0 .75rem;
+  font-size: 1.6rem;
+}
+
+/* Contact list */
+.contact{
+  list-style: none;
+  padding: 0;
+  margin: .5rem 0 0;
+}
+.contact li{
+  padding: .4rem 0;
+  border-top: 1px solid var(--border);
+}
+.contact li:first-child{ border-top: none; }
+.contact a{
+  color: var(--accent);
+  text-decoration: none;
+}
+.contact a:hover{ text-decoration: underline; }
+
+/* Footer */
+.footer{
+  border-top: 1px solid var(--border);
+  background: #0a0b0f;
+  padding: 1.2rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Small screens */
+@media (max-width: 480px){
+  .btn--outline{ display:inline-block; margin-top:.6rem; margin-left:0; }
+}
+
+  </style>
+<body>
+  <header class="hero" id="home">
+    <div class="container">
+      <h1 class="hero__title">Xin chào, tôi là <span class="accent">MaiTienDung</span></h1>
+      <p class="hero__subtitle">Sinh viên / Lập trình viên yêu thích công nghệ & phát triển web</p>
+
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>C#</li>
+      </ul>
+
+      <nav class="cta">
+        <a class="btn" href="#about" aria-label="Tìm hiểu thêm">Tìm hiểu thêm</a>
+        <a class="btn btn--outline" href="#contact" aria-label="Liên hệ">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <h2>Về tôi</h2>
+        <p>
+          Mình đam mê lập trình web và thường xuyên xây dựng các dự án nhỏ để trau dồi kỹ năng.
+          Mục tiêu là học hỏi liên tục và phát triển trong lĩnh vực phần mềm.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <h2>Liên hệ</h2>
+        <p>Kết nối với tôi qua:</p>
+        <ul class="contact">
+          <!-- Thay thế các giá trị bên dưới bằng thông tin của bạn -->
+          <li><strong>Email:</strong> <a href="mailto:">none</a></li>
+          <li><strong>Facebook:</strong> <a href="https://facebook.com/" target="_blank" rel="noopener">facebook.com/your.profile</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 MaiTienDung All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
